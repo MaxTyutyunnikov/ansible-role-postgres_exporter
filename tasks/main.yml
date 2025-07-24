@@ -96,7 +96,7 @@
   become: true
   become_user: root
   service:
-    name: postgres_exporter
+    name: postgres_exporter_bdellegrazie
     enabled: "{{ postgres_exporter_service_enable }}"
   when: postgres_exporter_service_manage
 
@@ -104,7 +104,7 @@
   become: true
   become_user: root
   service:
-    name: postgres_exporter
+    name: postgres_exporter_bdellegrazie
     state: "{{ postgres_exporter_service_state }}"
   register: _postgres_exporter_service_state
   when: postgres_exporter_service_manage
